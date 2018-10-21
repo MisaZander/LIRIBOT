@@ -1,0 +1,19 @@
+{
+  "name": "liribot",
+  "version": "1.0.0",
+  "description": "\"A CLI LIRIBOT\"",
+  "main": "liri.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MisaZander/LIRIBOT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MisaZander/LIRIBOT/issues"
+  },
+  "homepage": "https://github.com/MisaZander/LIRIBOT#readme"
+}
