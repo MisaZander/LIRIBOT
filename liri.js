@@ -6,7 +6,7 @@ var fs = require("fs");
 
 var query = {
     type: "track",
-    query: "The Sign Ace of Base",
+    query: "We Are Young",
     limit: 1
 }
 
@@ -19,22 +19,22 @@ spotify.search(query, function(err, data) {
     let artist = data.tracks.items[0];
 
     var artists = "";
-    for(let i = 0; i < album.artists.length; i++){
-        artists += album.artists[i].name;
+    for(let i = 0; i < artist.artists.length; i++){
+        artists += artist.artists[i].name;
         artists += ", ";
     }
     console.log("Artists: " + artists);
     console.log("Song Name: " + artist.name);
     console.log("Preview Link: " + artist.preview_url);
     console.log("Anal Bum Cover: " + album.name);
-    
+
+    fs.appendFile("log.txt", "\n" + JSON.stringify(data.tracks.items[0], null, "\t"), function(fudge) {
+        if(fudge){
+             return console.log("Could not log output to file");
+        }
+
+        console.log("Data logged to log.txt");
+    });
 });
 
 
-// fs.appendFile("log.txt", "\n" + JSON.stringify(data.tracks.items[0], null, "\t"), function(fudge) {
-    //     if(fudge){
-    //          return console.log("Could not log output to file");
-    //     }
-
-    //     console.log("Data logged to log.txt");
-    // });
