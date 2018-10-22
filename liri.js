@@ -6,7 +6,7 @@ var fs = require("fs");
 
 var query = {
     type: "track",
-    query: "Ace of Spades",
+    query: "The Sign Ace of Base",
     limit: 1
 }
 
@@ -15,12 +15,26 @@ spotify.search(query, function(err, data) {
         return console.log("Crap " + err);
     }
 
-    console.log(data);
-    fs.appendFile("log.txt", JSON.stringify(data), function(fudge) {
-        if(fudge){
-             return console.log("Could not log output to file");
-        }
+    let album = data.tracks.items[0].album;
+    let artist = data.tracks.items[0];
 
-        console.log("Data logged to log.txt");
-    });
+    var artists = "";
+    for(let i = 0; i < album.artists.length; i++){
+        artists += album.artists[i].name;
+        artists += ", ";
+    }
+    console.log("Artists: " + artists);
+    console.log("Song Name: " + artist.name);
+    console.log("Preview Link: " + artist.preview_url);
+    console.log("Anal Bum Cover: " + album.name);
+    
 });
+
+
+// fs.appendFile("log.txt", "\n" + JSON.stringify(data.tracks.items[0], null, "\t"), function(fudge) {
+    //     if(fudge){
+    //          return console.log("Could not log output to file");
+    //     }
+
+    //     console.log("Data logged to log.txt");
+    // });
