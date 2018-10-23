@@ -1,5 +1,6 @@
 require("dotenv").config();
 var spotify = require("./spotify.js");
+var bandsintown = require("./bandsintown.js");
 var command = process.argv[2];
 var query = process.argv[3];
 
@@ -14,7 +15,7 @@ switch(command) {
         spotify.spotifyObj.query(query);
     break;
     case "concert-this":
-
+        bandsintown.bandsintown.query(query);
     break;
     case "movie-this":
 

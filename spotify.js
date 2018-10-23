@@ -2,7 +2,6 @@ function SpotifyObj() {
     this.keys = require("./keys.js");
     this.Spotify = require("node-spotify-api");
     this.spotify = new this.Spotify(this.keys.spotify);
-    //this.fs = require("fs");
     this.query =  function(queryString) {
         let searchObj = {
             type: "track",

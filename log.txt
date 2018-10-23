@@ -1,0 +1,18 @@
+{ id: '1008464638',
+  artist_id: '190899',
+  url: 'https://www.bandsintown.com/e/1008464638?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event',
+  on_sale_datetime: '2018-02-12T15:55:00',
+  datetime: '2018-10-24T19:00:00',
+  description: 'Ed Sheeran',
+  venue: 
+   { country: 'United States',
+     city: 'Milwaukee',
+     latitude: '43.0297022',
+     name: 'Miller Park',
+     region: 'WI',
+     longitude: '-87.9724867' },
+  lineup: [ 'Ed Sheeran' ],
+  offers: 
+   [ { type: 'Tickets',
+       url: 'https://www.bandsintown.com/t/1008464638?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=ticket',
+       status: 'available' } ] }
