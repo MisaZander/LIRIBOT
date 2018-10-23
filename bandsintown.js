@@ -10,7 +10,7 @@ var BITObj = {
 
         this.axios.get(query)
         .then(function(response) {
-            console.log(response.data[0]);
+            //console.log(response.data[0]);
             // let fs = require("fs");
             // fs.appendFile("log.txt", "\n" + JSON.stringify(response, null, "\t"), function(fudge) {
             //     if(fudge){
@@ -22,6 +22,16 @@ var BITObj = {
             // .catch(function(error) {
             //     console.log("File write error: " + error);
             // });
+            for(let i = 0; i < response.data.length; i++) {
+                console.log("Venue: " + response.data[i].venue.name);
+                console.log("Venue Location: " + response.data[i].venue.city + ", " + response.data[i].venue.region);
+                console.log("Date: " + response.data[i].datetime);
+                console.log("---------------------------");
+
+                if(i === 4){
+                    break; //Limit to 5 results
+                }
+            }
         })
         .catch(function(error) {
             console.log("Axios Error: " + error);
