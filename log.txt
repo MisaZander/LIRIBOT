@@ -16,23 +16,24 @@
    [ { type: 'Tickets',
        url: 'https://www.bandsintown.com/t/1008464638?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=ticket',
        status: 'available' } ] }
+
 Venue: Miller Park
 Venue Location: Milwaukee, WI
-Date: 2018-10-24T19:00:00
+Date: 10/24/2018
 ---------------------------
 Venue: AT&T Stadium
 Venue Location: Arlington, TX
-Date: 2018-10-27T19:00:00
+Date: 10/27/2018
 ---------------------------
 Venue: Mercedes-Benz Superdome
 Venue Location: New Orleans, LA
-Date: 2018-10-31T19:00:00
+Date: 10/31/2018
 ---------------------------
 Venue: Minute Maid Park
 Venue Location: Houston, TX
-Date: 2018-11-03T19:00:00
+Date: 11/03/2018
 ---------------------------
 Venue: Raymond James Stadium
 Venue Location: Tampa, FL
-Date: 2018-11-07T19:00:00
+Date: 11/07/2018
 ---------------------------
