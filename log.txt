@@ -1,4 +1,4 @@
-data.tracks.items[0].{}
+
 {
 	"album": {
 		"album_type": "album",
@@ -15,7 +15,26 @@ data.tracks.items[0].{}
 			}
 		],
 		"available_markets": [
-			//State codes
+			"AT",
+			"BG",
+			"CH",
+			"CZ",
+			"DE",
+			"DK",
+			"EE",
+			"FI",
+			"HU",
+			"IL",
+			"IS",
+			"LT",
+			"LV",
+			"NO",
+			"PL",
+			"RO",
+			"SE",
+			"SK",
+			"TR",
+			"US"
 		],
 		"external_urls": {
 			"spotify": "https://open.spotify.com/album/7iycyHwOW2plljYIK6I1Zo"
@@ -69,7 +88,26 @@ data.tracks.items[0].{}
 		}
 	],
 	"available_markets": [
-		//State codes
+		"AT",
+		"BG",
+		"CH",
+		"CZ",
+		"DE",
+		"DK",
+		"EE",
+		"FI",
+		"HU",
+		"IL",
+		"IS",
+		"LT",
+		"LV",
+		"NO",
+		"PL",
+		"RO",
+		"SE",
+		"SK",
+		"TR",
+		"US"
 	],
 	"disc_number": 1,
 	"duration_ms": 250626,
