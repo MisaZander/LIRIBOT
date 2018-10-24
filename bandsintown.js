@@ -2,11 +2,7 @@ var BITObj = {
     axios: require("axios"),
     query: function(queryString) {
         var query = "https://rest.bandsintown.com/artists/" + queryString + "/events?app_id=codingbootcamp";
-        // let query = {
-        //     url: queryString,
-        //     method: "GET"
-        // }
-
+        
         this.axios.get(query)
         .then(function(response) {
             var moment = require("moment");
