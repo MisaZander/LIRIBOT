@@ -1,5 +1,4 @@
 var BITObj = {
-    //moment: require("moment"),
     axios: require("axios"),
     query: function(queryString) {
         var query = "https://rest.bandsintown.com/artists/" + queryString + "/events?app_id=codingbootcamp";
@@ -10,18 +9,6 @@ var BITObj = {
 
         this.axios.get(query)
         .then(function(response) {
-            //console.log(response.data[0]);
-            // let fs = require("fs");
-            // fs.appendFile("log.txt", "\n" + JSON.stringify(response, null, "\t"), function(fudge) {
-            //     if(fudge){
-            //         return console.log("Could not log output to file");
-            //     }
-
-            //     console.log("Data logged to log.txt");
-            // })
-            // .catch(function(error) {
-            //     console.log("File write error: " + error);
-            // });
             var moment = require("moment");
             for(let i = 0; i < response.data.length; i++) {
                 console.log("Venue: " + response.data[i].venue.name);
