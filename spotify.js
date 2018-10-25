@@ -27,13 +27,13 @@ function SpotifyObj() {
             console.log("Preview Link: " + artist.preview_url);
             console.log("Anal Bum Cover: " + album.name);
 
-            fs.appendFile("log.txt", "\n" + JSON.stringify(data.tracks.items[0], null, "\t"), function(fudge) {
-                if(fudge){
-                    return console.log("Could not log output to file");
-                }
+            // fs.appendFile("log.txt", "\n" + JSON.stringify(data.tracks.items[0], null, "\t"), function(fudge) {
+            //     if(fudge){
+            //         return console.log("Could not log output to file");
+            //     }
 
-                console.log("Data logged to log.txt");
-            });
+            //     console.log("Data logged to log.txt");
+            // });
         });
     },
     this.get = function() {
