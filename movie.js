@@ -15,7 +15,10 @@ var MovieObj = {
             console.log("Release Year: " + fdata.Year);
             console.log("IMDB Rating: " + fdata.imdbRating);
             console.log("Rotten Tomatoes Rating: " + fdata.Ratings[1].Value);
-            
+            console.log("Production Country: " + fdata.Country);
+            console.log("Language: " + fdata.Language);
+            console.log("Plot: " + fdata.Plot);
+            console.log("Actors: " + fdata.Actors);
         });
     }
 }
