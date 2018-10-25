@@ -2,6 +2,7 @@ require("dotenv").config();
 var spotify = require("./spotify.js");
 var bandsintown = require("./bandsintown.js");
 var movie = require("./movie.js");
+var fs = require("fs");
 var command = process.argv[2];
 var query = process.argv[3];
 
@@ -17,7 +18,14 @@ function liribot(c, q) {
             movie.movie.query(q);
         break;
         case "do-what-it-says":
-        
+            fs.readFile("random.txt", "utf8", function(err, data) {
+                if(err) {
+                    return console.log("Could not read 'random.txt'. Does it exist?");
+                }
+
+                let input = data.split(",");
+                liribot(input[0], input[1]);
+            });
         break;
         default:
             printHelp();
