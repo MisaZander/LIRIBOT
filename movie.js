@@ -8,10 +8,13 @@ var MovieObj = {
                 return console.log("Request Error: " + err);
             }
 
-            let formattedResponse = JSON.parse(body);
-            console.log(formattedResponse);
+            let fdata = JSON.parse(body);
+            //console.log(fdata);
 
-            //console.log(body);
+            console.log("Title: " + fdata.Title);
+            console.log("Release Year: " + fdata.Year);
+            console.log("IMDB Rating: " + fdata.imdbRating);
+            console.log("Rotten Tomatoes Rating: " + fdata.Ratings[1].Value);
             
         });
     }
