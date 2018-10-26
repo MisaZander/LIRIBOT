@@ -5,7 +5,7 @@ var BITObj = {
         this.request(query, function(err, response, data) {
             var moment = require("moment");
             var fdata = JSON.parse(data);
-            console.log(fdata);
+            //console.log(fdata);
             for(let i = 0; i < fdata.length; i++) {
                 console.log("Venue: " + fdata[i].venue.name);
                 console.log("Venue Location: " + fdata[i].venue.city + ", " + fdata[i].venue.region);

@@ -4,7 +4,7 @@ var bandsintown = require("./bandsintown.js");
 var movie = require("./movie.js");
 var fs = require("fs");
 var command = process.argv[2];
-var query = process.argv[3];
+var query = process.argv.splice(3).join(" ");
 
 function liribot(c, q) {
     switch(c) {

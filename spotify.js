@@ -40,7 +40,7 @@ function SpotifyObj() {
         console.log(typeof this.keys.spotify);
         console.log(this.keys.spotify);
         console.log(typeof this.Spotify);
-        console.log(this.Spotify)
+        console.log(this.Spotify);
     };
 }
 
