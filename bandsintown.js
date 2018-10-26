@@ -16,6 +16,18 @@ var BITObj = {
                     break; //Limit to 5 results
                 }
             }
+
+            var fs = require("fs");
+            for(let i = 0; i < fdata.length; i++) {
+                fs.appendFile("log.txt", 
+                    "Venue: " + fdata[i].venue.name + "\n" +
+                    "Venue Location: " + fdata[i].venue.city + ", " + fdata[i].venue.region + "\n" +
+                    "Date: " + moment(fdata[i].datetime, "YYYY-MM-DDTHH:mm:ss").format("MM/DD/YYYY") + "\n-------------------------------\n",
+                    function(err) {
+                        return console.log(err);
+                    }
+                )
+            }
         });
     }
 };

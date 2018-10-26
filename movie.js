@@ -19,6 +19,21 @@ var MovieObj = {
             console.log("Language: " + fdata.Language);
             console.log("Plot: " + fdata.Plot);
             console.log("Actors: " + fdata.Actors);
+
+            let fs = require("fs");
+            fs.appendFile("log.txt",
+                "Title: " + fdata.Title + "\n" +
+                "Release Year: " + fdata.Year + "\n" +
+                "IMDB Rating: " + fdata.imdbRating + "\n" +
+                "Rotten Tomatoes Rating: " + fdata.Ratings[1].Value + "\n" +
+                "Production Country: " + fdata.Country + "\n" +
+                "Language: " + fdata.Language + "\n" +
+                "Plot: " + fdata.Plot + "\n" +
+                "Actors: " + fdata.Actors + "\n---------------------------\n",
+                function(err) {
+                    if(err) return console.log("Could not write to logfile");
+                }
+            )
         });
     }
 }

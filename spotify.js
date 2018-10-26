@@ -6,7 +6,7 @@ function SpotifyObj() {
         let searchObj = {
             type: "track",
             query: queryString,
-            limit: 1
+            //limit: 1
         };
 
         this.spotify.search(searchObj, function(err, data) {
@@ -14,26 +14,33 @@ function SpotifyObj() {
                 return console.log("Whoops: " + err);
             }
             let fs = require("fs");
-            let album = data.tracks.items[0].album;
-            let artist = data.tracks.items[0];
+            for(let j = 0; j < data.tracks.items.length; j++) {   
+                let album = data.tracks.items[j].album;
+                let artist = data.tracks.items[j];
 
-            var artists = "";
-            for(let i = 0; i < artist.artists.length; i++){
-                artists += artist.artists[i].name;
-                artists += ", ";
+                var artists = "";
+                for(let i = 0; i < artist.artists.length; i++){
+                    artists += artist.artists[i].name;
+                    artists += ", ";
+                }
+                console.log("Artists: " + artists);
+                console.log("Song Name: " + artist.name);
+                console.log("Preview Link: " + artist.preview_url);
+                console.log("Album Name: " + album.name);
+
+                fs.appendFile("log.txt", 
+                "Artists: " + artists + "\n" +
+                "Song Name: " + artist.name + "\n" +
+                "Preview Link: " + artist.preview_url + "\n" +
+                "Album Name: " + album.name + "\n-----------------------\n"
+                , function(fudge) {
+                    if(fudge){
+                        return console.log("Could not log output to file");
+                    }
+
+                    //console.log("Data logged to log.txt");
+                });
             }
-            console.log("Artists: " + artists);
-            console.log("Song Name: " + artist.name);
-            console.log("Preview Link: " + artist.preview_url);
-            console.log("Anal Bum Cover: " + album.name);
-
-            // fs.appendFile("log.txt", "\n" + JSON.stringify(data.tracks.items[0], null, "\t"), function(fudge) {
-            //     if(fudge){
-            //         return console.log("Could not log output to file");
-            //     }
-
-            //     console.log("Data logged to log.txt");
-            // });
         });
     },
     this.get = function() {
