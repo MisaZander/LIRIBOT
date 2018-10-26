@@ -7,15 +7,19 @@ var command = process.argv[2];
 var query = process.argv.splice(3).join(" ");
 
 function liribot(c, q) {
+    let emptyQuery;
     switch(c) {
         case "spotify-this-song":
-            spotify.spotifyObj.query(q);
+            emptyQuery = q === "" ? "Ace of Base" : q;
+            spotify.spotifyObj.query(emptyQuery);
         break;
         case "concert-this":
-            bandsintown.bandsintown.query(q);
+            emptyQuery = q === "" ? "Ed Sheeran" : q;
+            bandsintown.bandsintown.query(emptyQuery);
         break;
         case "movie-this":
-            movie.movie.query(q);
+            emptyQuery = q === "" ? "Die Hard" : q;
+            movie.movie.query(emptyQuery);
         break;
         case "do-what-it-says":
             fs.readFile("random.txt", "utf8", function(err, data) {
