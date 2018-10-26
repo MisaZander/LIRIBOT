@@ -14,6 +14,9 @@ function SpotifyObj() {
                 return console.log("Spotify API call error:: " + err);
             }
             let fs = require("fs");
+            if(data.tracks.items.length === 0) {
+                return console.log("No results");
+            }
             for(let j = 0; j < data.tracks.items.length; j++) {   
                 let album = data.tracks.items[j].album;
                 let artist = data.tracks.items[j];

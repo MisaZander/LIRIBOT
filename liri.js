@@ -18,7 +18,7 @@ function liribot(c, q) {
             bandsintown.bandsintown.query(emptyQuery);
         break;
         case "movie-this":
-            emptyQuery = q === "" ? "Die Hard" : q;
+            emptyQuery = q === "" ? "Mr. Nobody" : q;
             movie.movie.query(emptyQuery);
         break;
         case "do-what-it-says":
