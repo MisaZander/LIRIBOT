@@ -24,9 +24,15 @@ var BITObj = {
                     "Venue Location: " + fdata[i].venue.city + ", " + fdata[i].venue.region + "\n" +
                     "Date: " + moment(fdata[i].datetime, "YYYY-MM-DDTHH:mm:ss").format("MM/DD/YYYY") + "\n-------------------------------\n",
                     function(err) {
-                        return console.log(err);
+                        if(err) {
+                            return console.log(err);
+                        }
                     }
-                )
+                );
+
+                if(i === 4){
+                    break; //Limit to 5 results
+                }
             }
         });
     }

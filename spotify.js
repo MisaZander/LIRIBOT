@@ -11,7 +11,7 @@ function SpotifyObj() {
 
         this.spotify.search(searchObj, function(err, data) {
             if(err) {
-                return console.log("Whoops: " + err);
+                return console.log("Spotify API call error:: " + err);
             }
             let fs = require("fs");
             for(let j = 0; j < data.tracks.items.length; j++) {   
@@ -27,6 +27,7 @@ function SpotifyObj() {
                 console.log("Song Name: " + artist.name);
                 console.log("Preview Link: " + artist.preview_url);
                 console.log("Album Name: " + album.name);
+                console.log("---------------------------");
 
                 fs.appendFile("log.txt", 
                 "Artists: " + artists + "\n" +
